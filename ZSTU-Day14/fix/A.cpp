@@ -3,19 +3,19 @@
 #include <cstdio>
 #define ll unsigned long long
 #define N 1000006
-
+ 
 using namespace std;
-
+ 
 ll f[100];
 ll g[100];
 ll n, p, r;
-
+ 
 struct _in
 {
     ll cnt;
     ll val;
 } num[N];
-
+ 
 ll pow(ll a)
 {
     ll ans = 1;
@@ -29,7 +29,7 @@ ll pow(ll a)
     }
     return ans;
 }
-
+ 
 ll get(ll a)
 {
     ll ans = 0;
@@ -43,16 +43,15 @@ ll get(ll a)
     }
     return ans;
 }
-
+ 
 int main()
-{
+{  
     scanf("%llu%llu%llu", &n, &p, &r);
-    f[0] = r;
-    g[0] = 1;
+    f[0] = r; g[0] = 1;
     for (ll i = 1; i <= 64; i++)
     {
         f[i] = (f[i - 1] * f[i - 1]) % p;
-        g[i] = (g[i - 1] + (g[i - 1] * f[i - 1]) % p) % p;
+        g[i] = (g[i - 1] + (g[i - 1] * f[i - 1]) % p) % p; 
     }
     for (ll i = 1; i <= n; i++)
     {

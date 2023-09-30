@@ -1,1 +1,1 @@
-del /a /f /s /q "*.exe"
+del /a /f /s /q "*.in"
