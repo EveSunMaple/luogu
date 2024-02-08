@@ -1,1 +1,1 @@
-del /a /f /s /q "*.in"
+del /a /f /s /q "*.out"
